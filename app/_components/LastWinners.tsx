@@ -9,7 +9,7 @@ interface Winner {
 }
 
 export const LastWinners = () => {
-  const [winners, setWinners] = useState<Winner[]>([
+  const [winners] = useState<Winner[]>([
     { picId: 1, amount: 100 },
     { picId: 2, amount: 200 },
     { picId: 2, amount: 200 },
