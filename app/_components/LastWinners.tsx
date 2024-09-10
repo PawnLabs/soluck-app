@@ -44,7 +44,7 @@ export const LastWinners = () => {
       <div className="relative w-[1560px] overflow-hidden">
         <div
           ref={scrollRef}
-          className="animate-slide-left flex gap-4 whitespace-nowrap"
+          className="flex animate-slide-left gap-4 whitespace-nowrap"
           style={{ width: "max-content" }}
         >
           {winners.concat(winners).map((winner, index) => (
@@ -63,7 +63,7 @@ interface WinnerRectangleProps {
 
 const WinnerRectangle: React.FC<WinnerRectangleProps> = ({ winner }) => {
   return (
-    <div className="bg-blackish border-black-4 flex h-[48px] w-[130px] flex-shrink-0 items-center justify-center gap-3 rounded-xl border-[1px]">
+    <div className="flex h-[48px] w-[130px] flex-shrink-0 items-center justify-center gap-3 rounded-xl border-[1px] border-black-4 bg-blackish">
       <Image
         src={profilePicSvg}
         alt="Logo"
@@ -73,7 +73,7 @@ const WinnerRectangle: React.FC<WinnerRectangleProps> = ({ winner }) => {
       />
       <div className="flex text-sm">
         <div className="text-yellow-main">$</div>
-        <div className="">{winner.amount}</div>
+        <div className="text-white">{winner.amount}</div>
       </div>
     </div>
   );
