@@ -16,9 +16,9 @@ export const Join = () => {
   const toggleSwitch = () => setIsSol(!isSol);
 
   return (
-    <div className={"relative flex h-[130px] flex-col"}>
+    <div className={"relative flex h-[145px] flex-col"}>
       <div className="relative mb-2 ml-5 h-[70px] w-[216px] rounded-xl border-[1px] border-black-4 bg-blackish py-2 text-white">
-        <div className="flex items-start justify-center gap-2 text-xs text-white-gray">
+        <div className="flex items-start justify-center gap-2 pt-1 text-xs text-white-gray">
           <div className="flex h-[32px] w-[41px] cursor-pointer items-center justify-center rounded-lg bg-black hover:bg-yellow-main hover:text-black-main">
             25%
           </div>
