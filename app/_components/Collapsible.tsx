@@ -1,9 +1,21 @@
 "use client";
-import { useState } from "react";
+import React, { useState, ReactNode } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
-export const Collapsible = ({ style }: { style: string }) => {
-  const [isOpen, setIsOpen] = useState(false);
+interface CollapsibleProps {
+  style: string;
+  title: string;
+  h: string;
+  children: ReactNode;
+}
+
+export const Collapsible: React.FC<CollapsibleProps> = ({
+  style,
+  title,
+  h,
+  children,
+}) => {
+  const [isOpen, setIsOpen] = useState(true);
 
   return (
     <div className={style}>
@@ -22,7 +34,7 @@ export const Collapsible = ({ style }: { style: string }) => {
         transition={{ duration: 0.3 }}
       >
         <div className="flex items-center justify-between">
-          <span>Chat</span>
+          <span>{title}</span>
           <motion.svg
             className="h-6 w-6"
             animate={{ rotate: isOpen ? 180 : 0 }}
@@ -48,17 +60,21 @@ export const Collapsible = ({ style }: { style: string }) => {
             animate="open"
             exit="collapsed"
             variants={{
-              open: { opacity: 1, height: "283px" },
+              open: { opacity: 1, height: h },
               collapsed: { opacity: 0, height: 0 },
             }}
             transition={{ delay: 0.01 }}
-            className="overflow-hidden rounded-b-xl border-x-[1px] border-b-[1px] border-black-4 bg-blackish text-white"
+            className={
+              style +
+              " h-full overflow-hidden rounded-b-xl border-x-[1px] border-b-[1px] border-black-4 bg-blackish text-white"
+            }
           >
             <motion.div
               variants={{ collapsed: { scale: 0.8 }, open: { scale: 1 } }}
               transition={{ duration: 0.3 }}
+              className="h-full w-full"
             >
-              <p>Content goes here</p>
+              <div className="h-full w-full">{children}</div>
             </motion.div>
           </motion.div>
         )}

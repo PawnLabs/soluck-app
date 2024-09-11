@@ -17,7 +17,7 @@ export const Header = () => {
         className="ml-16"
       />
       <div className="ml-auto mr-[64px] flex items-center justify-center">
-        <div className="text-white-gray mr-6 flex gap-8">
+        <div className="mr-6 flex gap-8 text-white-gray">
           <div className="flex gap-2">
             <Image
               src={trophySvg}
