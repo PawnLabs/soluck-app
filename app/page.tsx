@@ -5,6 +5,9 @@ import { Header } from "./_components/Header";
 import { LastWinners } from "./_components/LastWinners";
 import { Participants } from "./_components/Participants";
 import { Room } from "./_components/Room";
+import { GameArea } from "./_components/GameArea";
+import { Join } from "./_components/Join";
+import { Chat } from "./_components/Chat";
 
 export default function Home() {
   const [currentRoom, setCurrentRoom] = useState(1);
@@ -40,14 +43,17 @@ export default function Home() {
               ))}
             </div>
           </Collapsible>
-          <Collapsible style="w-[383px]" h="350px" title="Participants">
+          <Collapsible style="w-[383px]" h="430px" title="Participants">
             <Participants />
           </Collapsible>
         </div>
-        <div className="h-full w-[958px]"></div>
-        <div className="h-full w-[511px] items-center justify-center pt-4">
-          <Collapsible style="w-[383px]" h="250px" title="Chat">
-            <div></div>
+        <div className="flex h-full w-[958px] flex-col pt-4">
+          <GameArea></GameArea>
+          <Join></Join>
+        </div>
+        <div className="flex h-full w-[511px] items-start justify-center pt-4">
+          <Collapsible style="w-[383px] " h="700px" title="Chat">
+            <Chat></Chat>
           </Collapsible>
         </div>
       </div>

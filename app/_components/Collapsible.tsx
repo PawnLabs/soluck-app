@@ -71,8 +71,7 @@ export const Collapsible: React.FC<CollapsibleProps> = ({
             }}
             transition={{ delay: 0 }}
             className={
-              style +
-              " h-full overflow-hidden rounded-b-xl border-x-[1px] border-b-[1px] border-black-4 bg-blackish text-white"
+              "h-full overflow-hidden rounded-b-xl border-x-[1px] border-b-[1px] border-black-4 bg-blackish text-white"
             }
           >
             <motion.div
