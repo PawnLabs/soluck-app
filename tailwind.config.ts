@@ -11,6 +11,7 @@ const config: Config = {
       backgroundImage: {
         "custom-gradient":
           "linear-gradient(176.83deg, #CEF305 2.49%, #96B005 97.26%)",
+        "game-gradient": "linear-gradient(180deg, #141414 0%, #111111 100%)",
       },
       animation: {
         "slide-left": "slide-left var(--animation-duration) linear infinite",
