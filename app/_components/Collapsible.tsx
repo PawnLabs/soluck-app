@@ -31,14 +31,20 @@ export const Collapsible: React.FC<CollapsibleProps> = ({
           borderBottomLeftRadius: isOpen ? 0 : 8,
           borderBottomRightRadius: isOpen ? 0 : 8,
         }}
-        transition={{ duration: 0.3 }}
+        transition={
+          isOpen
+            ? { duration: 0 }
+            : {
+                duration: 0,
+              }
+        }
       >
         <div className="flex items-center justify-between">
           <span>{title}</span>
           <motion.svg
             className="h-6 w-6"
             animate={{ rotate: isOpen ? 180 : 0 }}
-            transition={{ duration: 0.3 }}
+            transition={{ duration: 0.4 }}
             fill="none"
             stroke="currentColor"
             viewBox="0 0 24 24"
@@ -63,7 +69,7 @@ export const Collapsible: React.FC<CollapsibleProps> = ({
               open: { opacity: 1, height: h },
               collapsed: { opacity: 0, height: 0 },
             }}
-            transition={{ delay: 0.01 }}
+            transition={{ delay: 0 }}
             className={
               style +
               " h-full overflow-hidden rounded-b-xl border-x-[1px] border-b-[1px] border-black-4 bg-blackish text-white"
@@ -71,7 +77,7 @@ export const Collapsible: React.FC<CollapsibleProps> = ({
           >
             <motion.div
               variants={{ collapsed: { scale: 0.8 }, open: { scale: 1 } }}
-              transition={{ duration: 0.3 }}
+              transition={{ duration: 0.4 }}
               className="h-full w-full"
             >
               <div className="h-full w-full">{children}</div>

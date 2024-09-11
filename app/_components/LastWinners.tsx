@@ -53,6 +53,9 @@ export const LastWinners = () => {
         </div>
         <div className="pointer-events-none absolute inset-0 bg-gradient-to-r from-[#0F0F0F] via-[rgba(15,15,15,0.16)] to-[#0F0F0F]"></div>
       </div>
+      <div className="flex h-[40px] w-[116px] cursor-pointer items-center justify-center rounded-xl bg-white bg-opacity-[0.08] text-sm text-white">
+        View All
+      </div>
     </div>
   );
 };

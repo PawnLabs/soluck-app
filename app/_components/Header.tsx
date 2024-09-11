@@ -18,17 +18,17 @@ export const Header = () => {
       />
       <div className="ml-auto mr-[64px] flex items-center justify-center">
         <div className="mr-6 flex gap-8 text-white-gray">
-          <div className="flex gap-2">
+          <div className="flex cursor-pointer gap-2">
             <Image
               src={trophySvg}
               alt="Logo"
               width={16}
               height={16}
-              className=" "
+              className=""
             />
             Leaderboard
           </div>
-          <div className="flex gap-2">
+          <div className="flex cursor-pointer gap-2">
             <Image
               src={dartSvg}
               alt="Logo"
@@ -41,10 +41,10 @@ export const Header = () => {
         </div>
         <div className="flex h-[48px] w-[270px] items-center justify-center gap-6 rounded-xl bg-black">
           <div className="flex gap-2">
-            <div className="flex h-[32px] w-[94px] items-center justify-center rounded-xl bg-yellow-main text-sm font-medium text-black-main">
+            <div className="flex h-[32px] w-[94px] cursor-pointer items-center justify-center rounded-xl bg-yellow-main text-sm font-medium text-black-main">
               $ 125.23
             </div>
-            <div className="flex h-[32px] w-[40px] items-center justify-center rounded-xl bg-white/[0.08]">
+            <div className="flex h-[32px] w-[40px] cursor-pointer items-center justify-center rounded-xl bg-white/[0.08]">
               <Image
                 src={arrowDownSvg}
                 alt="Arrow Down"
@@ -52,12 +52,12 @@ export const Header = () => {
                 height={18}
               />
             </div>
-            <div className="flex h-[32px] w-[40px] items-center justify-center rounded-xl bg-white/[0.08]">
+            <div className="flex h-[32px] w-[40px] cursor-pointer items-center justify-center rounded-xl bg-white/[0.08]">
               <Image src={arrowUpSvg} alt="Arrow Down" width={18} height={18} />
             </div>
           </div>
 
-          <div className="flex items-center justify-center rounded-xl">
+          <div className="flex cursor-pointer items-center justify-center rounded-xl">
             <Image src={profilePic} alt="Arrow Down" width={32} height={32} />
           </div>
         </div>

@@ -47,7 +47,7 @@ export default function Home() {
         <div className="h-full w-[958px]"></div>
         <div className="h-full w-[511px] items-center justify-center pt-4">
           <Collapsible style="w-[383px]" h="250px" title="Chat">
-            <div>hey</div>
+            <div></div>
           </Collapsible>
         </div>
       </div>
