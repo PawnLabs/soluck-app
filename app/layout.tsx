@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { ContentLayout } from "./content.layout";
 import { Lexend } from "next/font/google"; // Add this import
+import { SocketProvider } from "./socket/socket";
 
 const lexend = Lexend({
   subsets: ["latin"],
@@ -22,7 +23,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={` ${lexend.className} antialiased`}>
-        <ContentLayout> {children}</ContentLayout>
+        <SocketProvider>
+          <ContentLayout> {children}</ContentLayout>
+        </SocketProvider>
       </body>
     </html>
   );
