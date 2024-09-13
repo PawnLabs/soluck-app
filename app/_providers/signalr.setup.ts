@@ -3,7 +3,7 @@ import * as signalR from "@microsoft/signalr";
 let connection: signalR.HubConnection | null = null;
 
 export const startSignalRConnection = () => {
-  const url = "http://socket.soluck.io/rouletteHub";
+  const url = "https://socket.soluck.io/rouletteHub";
   connection = new signalR.HubConnectionBuilder()
     .withUrl(url)
     .withAutomaticReconnect()
