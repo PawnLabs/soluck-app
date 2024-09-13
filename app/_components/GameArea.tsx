@@ -3,6 +3,9 @@ import React, { useState, useRef, useCallback, useMemo } from "react";
 import ReactECharts from "echarts-for-react";
 import type { EChartsOption, ECharts } from "echarts";
 import { players } from "../_dummyData/players";
+import { Countdown } from "./Countdown";
+import PinSvg from "../icons/Pin.svg";
+import Image from "next/image";
 
 export const GameArea = () => {
   const [isRotating, setIsRotating] = useState(false);
@@ -108,8 +111,12 @@ export const GameArea = () => {
     <div className="flex h-[615px] w-full flex-col items-center justify-center">
       <div
         onClick={startRotation}
-        className="h-[600px] w-[600px] rounded-full border-[1px] border-black-4 bg-game-gradient"
+        className="relative h-[600px] w-[600px] rounded-full border-[1px] border-black-4 bg-game-gradient"
       >
+        <div className="absolute left-1/2 top-1/2 h-[480px] w-[480px] -translate-x-1/2 -translate-y-1/2 rounded-full border-[1px] border-black-4 bg-game-gradient"></div>
+        <div className="absolute left-1/2 top-1/2 z-10 flex h-[370px] w-[370px] -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full bg-black-main">
+          <Countdown></Countdown>
+        </div>
         <ReactECharts
           ref={chartRef}
           option={option}
@@ -117,6 +124,9 @@ export const GameArea = () => {
           notMerge={true}
           lazyUpdate={false}
         />
+        <div className="absolute bottom-[-30px] left-1/2">
+          <Image src={PinSvg} alt="Arrow Down" width={32} height={56} />
+        </div>
       </div>
     </div>
   );
