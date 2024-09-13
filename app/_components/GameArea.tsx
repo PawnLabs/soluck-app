@@ -2,6 +2,7 @@
 import React, { useState, useRef, useCallback, useMemo } from "react";
 import ReactECharts from "echarts-for-react";
 import type { EChartsOption, ECharts } from "echarts";
+import { players } from "../_dummyData/players";
 
 export const GameArea = () => {
   const [isRotating, setIsRotating] = useState(false);
@@ -11,13 +12,7 @@ export const GameArea = () => {
   const TOTAL_DURATION = 5000; // Total animation duration in milliseconds
   const ROTATIONS = 20; // Number of full rotations before stopping
 
-  const data = [
-    { value: 1048, name: "John 55%", itemStyle: { color: "#ff6b6b" } },
-    { value: 735, name: "Fohn 30%", itemStyle: { color: "#4ecdc4" } },
-    { value: 580, name: "Vohn 22%", itemStyle: { color: "#45b7d1" } },
-    { value: 484, name: "7gS..sCd 15%", itemStyle: { color: "#f9d56e" } },
-    { value: 300, name: "6sJ..skB 32%", itemStyle: { color: "#ff8a5c" } },
-  ];
+  const data = useMemo(() => players, []);
 
   const totalValue = useMemo(
     () => data.reduce((sum, item) => sum + item.value, 0),
