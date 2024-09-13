@@ -44,6 +44,7 @@ export const Collapsible: React.FC<CollapsibleProps> = ({
           <motion.svg
             className="h-6 w-6"
             animate={{ rotate: isOpen ? 180 : 0 }}
+            initial={{ rotate: 180 }}
             transition={{ duration: 0.4 }}
             fill="none"
             stroke="gray"

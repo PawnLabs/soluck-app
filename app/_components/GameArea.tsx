@@ -31,7 +31,7 @@ export const GameArea = () => {
         angleSum += (data[i].value / totalValue) * 360;
       }
       angleSum += (data[index].value / totalValue) * 180;
-      return (270 - angleSum + 360) % 360;
+      return (180 - angleSum + 360) % 360; // Changed from 270 to 360
     },
     [data, totalValue],
   );
@@ -73,7 +73,7 @@ export const GameArea = () => {
     if (isRotating) return;
 
     setIsRotating(true);
-    const winnerIndex = Math.floor(Math.random() * data.length);
+    const winnerIndex = 0;
     const winnerRotation = calculateWinnerRotation(winnerIndex);
 
     console.log(`Winner: ${data[winnerIndex].name}`);
@@ -113,7 +113,7 @@ export const GameArea = () => {
     <div className="flex h-[615px] w-full flex-col items-center justify-center">
       <div
         onClick={startRotation}
-        className="bg-game-gradient h-[600px] w-[600px] rounded-full border-[1px] border-black-4"
+        className="h-[600px] w-[600px] rounded-full border-[1px] border-black-4 bg-game-gradient"
       >
         <ReactECharts
           ref={chartRef}
