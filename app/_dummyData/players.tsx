@@ -1,7 +1,7 @@
 const shadowBlur = 7;
 export const players = [
   {
-    value: 1048,
+    value: 50,
     name: "John 55%",
     itemStyle: {
       color: "#CEF305",

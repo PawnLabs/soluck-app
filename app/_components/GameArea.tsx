@@ -125,7 +125,13 @@ export const GameArea = () => {
           lazyUpdate={false}
         />
         <div className="absolute bottom-[-30px] left-1/2">
-          <Image src={PinSvg} alt="Arrow Down" width={32} height={56} />
+          <Image
+            src={PinSvg}
+            alt="Arrow Down"
+            width={32}
+            height={56}
+            className="-translate-x-1/2 transform"
+          />
         </div>
       </div>
     </div>
