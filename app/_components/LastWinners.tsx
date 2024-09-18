@@ -1,27 +1,29 @@
 "use client";
 import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
-import profilePicSvg from "../icons/profilePictures.svg";
+import profilePicSvg from "../icons/newProfile.svg";
+import { cn } from "../_utils/tw.utils";
 
 interface Winner {
   picId: number;
+  color: string;
   amount: number;
 }
 
 export const LastWinners = () => {
   const [winners] = useState<Winner[]>([
-    { picId: 1, amount: 100 },
-    { picId: 2, amount: 200 },
-    { picId: 2, amount: 200 },
-    { picId: 2, amount: 200 },
-    { picId: 2, amount: 200 },
-    { picId: 2, amount: 200 },
-    { picId: 2, amount: 200 },
-    { picId: 2, amount: 200 },
-    { picId: 2, amount: 200 },
-    { picId: 2, amount: 200 },
-    { picId: 2, amount: 200 },
-    { picId: 2, amount: 200 },
+    { picId: 1, amount: 15, color: "bg-white" },
+    { picId: 2, amount: 55, color: "bg-yellow-main" },
+    { picId: 2, amount: 32, color: "bg-wheel-purple" },
+    { picId: 2, amount: 12, color: "bg-yellow-main" },
+    { picId: 2, amount: 15, color: "bg-wheel-red" },
+    { picId: 2, amount: 55, color: "bg-yellow-main" },
+    { picId: 2, amount: 250, color: "bg-wheel-purple" },
+    { picId: 2, amount: 120, color: "bg-white" },
+    { picId: 2, amount: 13, color: "bg-wheel-red" },
+    { picId: 2, amount: 12, color: "bg-yellow-main" },
+    { picId: 2, amount: 44, color: "bg-wheel-purple" },
+    { picId: 2, amount: 68, color: "bg-wheel-red" },
   ]);
 
   const scrollRef = useRef<HTMLDivElement>(null);
@@ -72,7 +74,7 @@ const WinnerRectangle: React.FC<WinnerRectangleProps> = ({ winner }) => {
         alt="Logo"
         width={32}
         height={32}
-        className=""
+        className={`rounded-full ${winner.color} p-1`}
       />
       <div className="flex text-sm">
         <div className="text-yellow-main">$</div>

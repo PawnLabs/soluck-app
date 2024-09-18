@@ -1,14 +1,9 @@
 import { useState } from "react";
 import { Participant } from "./Participant";
+import { players } from "../_dummyData/players";
 
 export const Participants = () => {
-  const [participants, setParticipants] = useState([
-    { id: 1, name: "John Doe", amount: 100 },
-    { id: 2, name: "Fohn Doe", amount: 200 },
-    { id: 3, name: "Vohn Doe", amount: 300 },
-    { id: 4, name: "7gSf...sCdS", amount: 400 },
-    { id: 5, name: "6sjW...skBS", amount: 500 },
-  ]);
+  const [participants, setParticipants] = useState(players);
 
   return (
     <div>

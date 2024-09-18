@@ -17,23 +17,32 @@ export const Join = () => {
 
   return (
     <div className={"relative flex h-[145px] flex-col"}>
-      <div className="relative mb-2 ml-5 h-[70px] w-[216px] rounded-xl border-[1px] border-black-4 bg-blackish py-2 text-white">
-        <div className="flex items-start justify-center gap-2 pt-1 text-xs text-white-gray">
-          <div className="flex h-[32px] w-[41px] cursor-pointer items-center justify-center rounded-lg bg-black hover:bg-yellow-main hover:text-black-main">
-            25%
-          </div>
-          <div className="flex h-[32px] w-[41px] cursor-pointer items-center justify-center rounded-lg bg-black hover:bg-yellow-main hover:text-black-main">
-            50%
-          </div>
-          <div className="flex h-[32px] w-[41px] cursor-pointer items-center justify-center rounded-lg bg-black hover:bg-yellow-main hover:text-black-main">
-            75%
-          </div>
-          <div className="flex h-[32px] w-[41px] cursor-pointer items-center justify-center rounded-lg bg-black hover:bg-yellow-main hover:text-black-main">
-            MAX
+      <div className="flex">
+        <div className="relative mb-2 ml-5 h-[60px] w-[216px] rounded-xl border-[1px] border-black-4 bg-blackish py-2 text-white">
+          <div className="flex items-start justify-center gap-2 pt-1 text-xs text-white-gray">
+            <div className="flex h-[32px] w-[41px] cursor-pointer items-center justify-center rounded-lg bg-black hover:bg-yellow-main hover:text-black-main">
+              25%
+            </div>
+            <div className="flex h-[32px] w-[41px] cursor-pointer items-center justify-center rounded-lg bg-black hover:bg-yellow-main hover:text-black-main">
+              50%
+            </div>
+            <div className="flex h-[32px] w-[41px] cursor-pointer items-center justify-center rounded-lg bg-black hover:bg-yellow-main hover:text-black-main">
+              75%
+            </div>
+            <div className="flex h-[32px] w-[41px] cursor-pointer items-center justify-center rounded-lg bg-black hover:bg-yellow-main hover:text-black-main">
+              MAX
+            </div>
           </div>
         </div>
+        <div className="relative mb-2 ml-auto mr-16 mt-1 flex h-[70px] w-[216px] items-center justify-center gap-2 rounded-xl border-[1px] border-black-4 bg-blackish py-2 text-white">
+          <div className="mb-3">Total Bet:</div>
+          <div className="mb-3 flex h-[16px] w-[16px] items-center justify-center rounded-full bg-yellow-main text-sm font-medium text-black">
+            $
+          </div>
+          <div className="mb-3 text-xs text-yellow-main">{100}</div>
+        </div>
       </div>
-      <div className="z-10 mt-[-16px] flex h-[96px] w-[898px] items-center justify-start rounded-xl border-[1px] border-black-4 bg-blackish text-white">
+      <div className="z-10 mt-[-24px] flex h-[96px] w-[898px] items-center justify-start rounded-xl border-[1px] border-black-4 bg-blackish text-white">
         <div className="ml-4 flex h-[48px] w-[734px] items-center rounded-xl bg-black">
           <div
             className={`relative ml-4 flex h-[28px] w-[56px] cursor-pointer items-center rounded-full bg-white bg-opacity-[0.08] px-[2px] ${
@@ -71,7 +80,7 @@ export const Join = () => {
             ></input>
           </div>
         </div>
-        <div className="bg-custom-gradient border-yellow-darkish ml-auto mr-6 flex h-[48px] w-[100px] cursor-pointer items-center justify-center rounded-xl border-[2px] text-black-main">
+        <div className="ml-auto mr-6 flex h-[48px] w-[100px] cursor-pointer items-center justify-center rounded-xl border-[2px] border-yellow-darkish bg-custom-gradient text-black-main">
           Join
         </div>
       </div>

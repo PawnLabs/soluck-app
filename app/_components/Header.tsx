@@ -2,7 +2,7 @@ import Image from "next/image";
 import logoSvg from "../icons/logo.svg";
 import arrowDownSvg from "../icons/arrowdown.svg";
 import arrowUpSvg from "../icons/arrowup.svg";
-import profilePic from "../icons/profilePictures.svg";
+import profilePic from "../icons/newProfile.svg";
 import dartSvg from "../icons/dart.svg";
 import trophySvg from "../icons/trophy.svg";
 
@@ -57,8 +57,14 @@ export const Header = () => {
             </div>
           </div>
 
-          <div className="flex cursor-pointer items-center justify-center rounded-xl">
-            <Image src={profilePic} alt="Arrow Down" width={32} height={32} />
+          <div className="flex cursor-pointer items-center justify-center rounded-full bg-white">
+            <Image
+              src={profilePic}
+              alt="Arrow Down"
+              className="p-1"
+              width={32}
+              height={32}
+            />
           </div>
         </div>
       </div>

@@ -33,6 +33,8 @@ const config: Config = {
         "white-gray": "#909293",
         "black-4": "#272727",
         blackish: "#111111",
+        "wheel-purple": "#652DE2",
+        "wheel-red": "#DC0E24",
       },
     },
   },
