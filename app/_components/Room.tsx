@@ -27,7 +27,7 @@ export const Room: React.FC<RoomProps> = ({
       <div className="ml-4 flex-col items-start justify-center first-letter:flex">
         <div className="text-sm text-white">{room.name}</div>
         <div className="text-xs font-normal text-white-gray">
-          {room.price + " only jackpot."}
+          {room.price + " only game."}
         </div>
       </div>
       <div className="ml-auto mr-4 flex h-[18px] w-[29px] items-center justify-center gap-1 rounded-xl text-sm text-yellow-main">

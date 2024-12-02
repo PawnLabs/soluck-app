@@ -26,7 +26,7 @@ export const Chat = () => {
     {
       sender: "9i8..7PZ",
       color: "bg-wheel-red",
-      message: "has placed their bet.",
+      message: "has entered to game on room 1.",
       messageType: IMessageTypes.SYSTEM,
       id: 2,
       time: "1m ago",
@@ -34,7 +34,7 @@ export const Chat = () => {
     {
       sender: "Bob",
       color: "bg-wheel-purple",
-      message: "has placed their bet.",
+      message: "has entered to game on room 1.",
       messageType: IMessageTypes.SYSTEM,
       id: 2,
       time: "1m ago",
@@ -50,7 +50,7 @@ export const Chat = () => {
     {
       sender: "Alice",
       color: "bg-yellow-main",
-      message: "has placed their bet.",
+      message: "has entered to game on room 1.",
       messageType: IMessageTypes.SYSTEM,
       id: 2,
       time: "now",

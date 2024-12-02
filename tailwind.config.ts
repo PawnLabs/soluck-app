@@ -35,6 +35,7 @@ const config: Config = {
         blackish: "#111111",
         "wheel-purple": "#652DE2",
         "wheel-red": "#DC0E24",
+        "modal-gray": "#141414",
       },
     },
   },
