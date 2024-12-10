@@ -34,12 +34,12 @@ export const Join = () => {
             </div>
           </div>
         </div>
-        <div className="relative mb-2 ml-auto mr-16 mt-1 flex h-[70px] w-[216px] items-center justify-center gap-2 rounded-xl border-[1px] border-black-4 bg-blackish py-2 text-white">
-          <div className="mb-3">Total Bet:</div>
+        <div className="relative text-sm mb-2 ml-auto mr-16 mt-1 flex h-[70px] w-[236px] items-center justify-center gap-2 rounded-xl border-[1px] border-black-4 bg-blackish py-2 text-white">
+          <div className="mb-3" >Total Game Amount:</div>
           <div className="mb-3 flex h-[16px] w-[16px] items-center justify-center rounded-full bg-yellow-main text-sm font-medium text-black">
             $
           </div>
-          <div className="mb-3 text-xs text-yellow-main">{100}</div>
+          <div className="mb-3   text-yellow-main">{100}</div>
         </div>
       </div>
       <div className="z-10 mt-[-24px] flex h-[96px] w-[898px] items-center justify-start rounded-xl border-[1px] border-black-4 bg-blackish text-white">
